@@ -1,0 +1,52 @@
+target MD
+&cntrl
+ imin = 0, irest = 0, ntx = 1,
+ ntb = 2, pres0 = 1.0, ntp = 1,
+ taup = 2.0, cut = 10, ntr = 1,
+ restraint_wt=2.00,
+ restraintmask=":2-371@CA",
+ ntc = 2, ntf = 2, ig = -1,
+ tempi = 300.0, temp0 = 300.0,
+ ntt = 3, gamma_ln = 5.0,
+ nstlim = 1600000, dt = 0.002,
+ itgtmd=1,tgtmdfrc=1.5,
+ tgtrmsmask=":1",
+ ntpr = 500, ntwx = 500, ntwr = 500,
+ ioutfm = 1, iwrap = 1, nmropt = 1,
+/
+&wt
+ TYPE='TGTRMSD', istep1=1, istep2=200000,
+ value1 = 0.0, value2 = 5.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=200000, istep2=400000,
+ value1 = 5.0, value2 = 10.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=400000, istep2=600000,
+ value1 = 10.0, value2 = 15.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=600000, istep2=800000,
+ value1 = 15.0, value2 = 20.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=800000, istep2=1000000,
+ value1 = 20.0, value2 = 25.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=1000000, istep2=1200000,
+ value1 = 25.0, value2 = 30.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=1200000, istep2=1400000,
+ value1 = 30.0, value2 = 35.0,
+/
+&wt
+ TYPE='TGTRMSD', istep1=1400000, istep2=1600000,
+ value1 = 35.0, value2 = 40.0,
+/
+&wt
+ type="END",
+/
+
